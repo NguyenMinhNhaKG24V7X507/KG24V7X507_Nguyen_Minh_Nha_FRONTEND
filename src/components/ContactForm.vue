@@ -67,17 +67,47 @@
       />
     </div>
 
-    <div class="form-group form-check">
-      <input
-        type="checkbox"
-        class="form-check-input"
-        v-model="contactLocal.favorite"
-      />
-
-      <label class="form-check-label">
+    <div class="form-group">
+    <label>
         <strong>Liên hệ yêu thích</strong>
-      </label>
+    </label>
+
+    <div class="form-check">
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="family"
+            v-model="contactLocal.favoriteFamily"
+        />
+        <label class="form-check-label" for="family">
+            Gia đình
+        </label>
     </div>
+
+    <div class="form-check">
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="friend"
+            v-model="contactLocal.favoriteFriend"
+        />
+        <label class="form-check-label" for="friend">
+            Bạn bè
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input
+            class="form-check-input"
+            type="checkbox"
+            id="work"
+            v-model="contactLocal.favoriteWork"
+        />
+        <label class="form-check-label" for="work">
+            Công việc
+        </label>
+    </div>
+</div>
 
     <div class="form-group">
 

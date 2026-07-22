@@ -22,16 +22,24 @@ export default {
 
   data() {
     return {
-      contact: {
-        name: "",
-        email: "",
-        address: "",
-        phone: "",
-        favorite: false,
-      },
-      message: "",
+
+        contact: {
+
+            name: "",
+            email: "",
+            address: "",
+            phone: "",
+
+            favoriteFamily: false,
+            favoriteFriend: false,
+            favoriteWork: false,
+
+        },
+
+        message: "",
+
     };
-  },
+},
 
   methods: {
     async saveContact(data) {

@@ -33,8 +33,45 @@ export default {
 
     <div class="p-1">
       <strong>Liên hệ yêu thích:</strong>
-      <i v-if="contact.favorite" class="fas fa-check"></i>
-      <i v-else class="fas fa-times"></i>
+
+      <div class="mt-2">
+
+        <span
+          v-if="contact.favoriteFamily"
+          class="badge badge-danger mr-2"
+        >
+          <i class="fas fa-home"></i>
+          Gia đình
+        </span>
+
+        <span
+          v-if="contact.favoriteFriend"
+          class="badge badge-success mr-2"
+        >
+          <i class="fas fa-user-friends"></i>
+          Bạn bè
+        </span>
+
+        <span
+          v-if="contact.favoriteWork"
+          class="badge badge-primary mr-2"
+        >
+          <i class="fas fa-briefcase"></i>
+          Công việc
+        </span>
+
+        <span
+          v-if="
+            !contact.favoriteFamily &&
+            !contact.favoriteFriend &&
+            !contact.favoriteWork
+          "
+          class="text-muted"
+        >
+          Không thuộc nhóm nào
+        </span>
+
+      </div>
     </div>
   </div>
 </template>

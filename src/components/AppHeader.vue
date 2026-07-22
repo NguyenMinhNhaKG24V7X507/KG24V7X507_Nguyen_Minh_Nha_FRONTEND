@@ -15,5 +15,27 @@
         </router-link>
       </li>
     </div>
+
+    <!-- Nút đăng xuất -->
+    <button
+      class="btn btn-danger btn-sm"
+      @click="logout"
+    >
+      Đăng xuất
+    </button>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    logout() {
+      localStorage.removeItem("login");
+
+      this.$router.push({
+        name: "login",
+      });
+    },
+  },
+};
+</script>
